@@ -3,7 +3,7 @@ import { ReturnForm } from '@/components/return-form';
 
 export default function Home() {
   return (
-    <div className='flex flex-col md:flex-row justify-evenly items-center md:items-start h-screen'>
+    <div className='flex flex-col md:flex-row justify-evenly items-center md:items-start'>
       <div className='mt-5 w-full max-w-[400px] px-4 md:px-0'>
         <h2 className='text-2xl font-bold mb-5'>Itinerarios CIRCULARES / IDA Y VUELTA</h2>
         <ReturnForm />

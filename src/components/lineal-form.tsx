@@ -1,6 +1,6 @@
 'use client';
 
-import { calculateLineal } from '@/app/actions/calculate-lineal.action';
+import { calculateLineal } from '@/actions/calculate-lineal.action';
 import { Input } from '@/components/input';
 import { SubmitButton } from '@/components/submit-button';
 import { useFormState } from 'react-dom';

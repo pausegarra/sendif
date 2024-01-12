@@ -1,6 +1,6 @@
 'use client';
 
-import { calculateReturn } from '@/app/actions/calculate-return.action';
+import { calculateReturn } from '@/actions/calculate-return.action';
 import { Input } from '@/components/input';
 import { SubmitButton } from '@/components/submit-button';
 import { useFormState } from 'react-dom';
