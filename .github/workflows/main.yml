@@ -34,7 +34,7 @@ jobs:
           docker pull psegarra/sendif:latest
           docker stop sendif
           docker rm sendif
-          docker run -dp 3300:5000 \
+          docker run -dp 3300:3000 \
             --name sendif \
             --restart=always \
             psegarra/sendif:latest
