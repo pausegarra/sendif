@@ -1,25 +1,12 @@
 'use server';
 
+import { getColor } from '@/helpers';
 import { z } from 'zod';
 
 const schema = z.object({
   distance: z.number().positive('Ingresa un número mayor a 0'),
   slope: z.number().positive('Ingresa un número mayor a 0')
 });
-
-type ResultColors = {
-  range: (x: number) => boolean;
-  color: string;
-  image: string;
-};
-
-const resultColors: ResultColors[] = [
-  { range: x => x <= 20, color: '#00ab64', image: 'very_easy' },
-  { range: x => x > 20 && x <= 40, color: '#03b1ec', image: 'easy' },
-  { range: x => x > 40 && x <= 60, color: '#f3772f', image: 'mid' },
-  { range: x => x > 60 && x <= 80, color: '#ee3342', image: 'hard' },
-  { range: x => x > 80, color: '#000', image: 'very_hard' }
-];
 
 export async function calculateReturn(prevState: any, formData: FormData) {
   const validated = schema.safeParse({
@@ -40,7 +27,7 @@ export async function calculateReturn(prevState: any, formData: FormData) {
   let percentage = (result / 1200) * 100;
   percentage = percentage > 100 ? 100 : percentage;
 
-  const color = resultColors.find(item => item.range(percentage));
+  const color = getColor(percentage);
 
   return {
     result,
