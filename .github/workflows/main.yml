@@ -21,7 +21,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: psegarra/timetracker:latest
+        tags: psegarra/sendif:latest
   
     - name: Deploy via SSH
       uses: appleboy/ssh-action@master
