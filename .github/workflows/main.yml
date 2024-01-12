@@ -31,11 +31,11 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          docker pull psegarra/timetracker:latest
-          docker stop timetracker
-          docker rm timetracker
-          docker run -dp 3030:5000 \
-            --name timetracker \
+          docker pull psegarra/sendif:latest
+          docker stop sendif
+          docker rm sendif
+          docker run -dp 3300:5000 \
+            --name sendif \
             --restart=always \
-            psegarra/timetracker:latest
+            psegarra/sendif:latest
           docker image prune -f
