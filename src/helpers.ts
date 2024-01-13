@@ -4,7 +4,7 @@ type ResultColor = {
   image: string;
 };
 
-const resultColors: ResultColor[] = [
+export const resultColors: ResultColor[] = [
   { range: x => x <= 20, color: '#00ab64', image: 'very_easy' },
   { range: x => x > 20 && x <= 40, color: '#03b1ec', image: 'easy' },
   { range: x => x > 40 && x <= 60, color: '#f3772f', image: 'mid' },
