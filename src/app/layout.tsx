@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <footer className="flex items-center flex-col bg-gray-100 py-5">
-          <div className="text-[#00004c]">developed by pau<strong>segarra</strong></div>
+          <div className="text-[#00004c]">desarrollado por pau<strong>segarra</strong></div>
           <div className="flex gap-5 py-5">
             <a href="https://github.com/pausegarra/sendif" target="_blank"><img src="/assets/github.svg" alt="" /></a>
           </div>
